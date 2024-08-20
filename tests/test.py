@@ -4,19 +4,19 @@ from speciallecture.CSVPrinter import CSVPrinter
 
 class TestCSVPrinter(unittest.TestCase):
     def test_read(self):
-        printer = CSVPrinter("tests/sample.csv")
-        line =printer.read()
+        printer = CSVPrinter("./sample.csv")
+        line = printer.read()
         print(line)
         self.assertEqual(3, len(line))  # add assertion here
 
     def test_1(self):
-        printer = CSVPrinter("tests/sample.csv")
+        printer = CSVPrinter("./sample.csv")
         line =printer.read()
         print(line)
         self.assertEqual(3, len(line))  # add assertion here
 
     def test_2(self):
-        printer = CSVPrinter("tests/sample.csv")
+        printer = CSVPrinter("./sample.csv")
         lines = printer.read()
         print(lines)
 
@@ -26,7 +26,7 @@ class TestCSVPrinter(unittest.TestCase):
 
     def test_3(self):
         try:
-            printer = CSVPrinter("tests/sample1.csv")
+            printer = CSVPrinter("./sample1.csv")
             printer.read()
             unittest.TestCase.fail("This line should not be invoked")
         except FileNotFoundError as e:
