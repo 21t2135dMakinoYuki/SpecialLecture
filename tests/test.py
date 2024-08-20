@@ -3,17 +3,11 @@ import unittest
 from speciallecture.CSVPrinter import CSVPrinter
 
 class TestCSVPrinter(unittest.TestCase):
-    def test_read(self):
-        printer = CSVPrinter("./sample.csv")
-        line = printer.read()
-        print(line)
-        self.assertEqual(3, len(line))  # add assertion here
-
     def test_1(self):
         printer = CSVPrinter("./sample.csv")
-        line =printer.read()
-        print(line)
-        self.assertEqual(3, len(line))  # add assertion here
+        lines = printer.read()
+        print(lines)
+        self.assertEqual(3, len(lines))  # add assertion here
 
     def test_2(self):
         printer = CSVPrinter("./sample.csv")
