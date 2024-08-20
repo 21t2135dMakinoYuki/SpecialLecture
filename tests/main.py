@@ -9,13 +9,13 @@ class TestCSVPrinter(unittest.TestCase):
         print(line)
         self.assertEqual(3, len(line))  # add assertion here
 
-    def test1(self):
+    def test_1(self):
         printer = CSVPrinter("tests/sample.csv")
         line =printer.read()
         print(line)
         self.assertEqual(3, len(line))  # add assertion here
 
-    def test2(self):
+    def test_2(self):
         printer = CSVPrinter("tests/sample.csv")
         lines = printer.read()
         print(lines)
@@ -24,7 +24,7 @@ class TestCSVPrinter(unittest.TestCase):
             self.assertEqual(4, len(line))
 
 
-    def test3(self):
+    def test_3(self):
         try:
             printer = CSVPrinter("tests/sample1.csv")
             printer.read()
